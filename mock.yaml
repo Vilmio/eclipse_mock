@@ -53,7 +53,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/HydrogenDto'
 
-  /history-data:
+  /history-data/:
     get:
       tags: [HHB]
       parameters:
