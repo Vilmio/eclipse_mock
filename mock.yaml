@@ -68,7 +68,6 @@ paths:
           required: false
           schema:
             type: string
-            format: date-time
           description: Optional date for which to retrieve history (defaults to now)
         - in: query
           name: time_period
