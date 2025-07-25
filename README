@@ -1,0 +1,37 @@
+# HHB Mock API
+
+This is a mock OpenAPI (v3.0.0) specification for the **Henry Home Backup (HHB)** system. It defines a set of endpoints under the `HHB` tag that simulate authentication, data retrieval, and user management operations.
+
+---
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Getting Started](#getting-started)
+- [Authentication](#authentication)
+- [Endpoints](#endpoints)
+  - [`GET /login`](#get-login)
+  - [`GET /overview-data`](#get-overview-data)
+  - [`GET /hydrogen-data`](#get-hydrogen-data)
+  - [`POST /history-data`](#post-history-data)
+  - [`GET /messages`](#get-messages)
+  - [`GET /modes`](#get-modes)
+  - [`GET /user/{login}`](#get-userlogin)
+  - [`POST /user`](#post-user)
+- [Schemas](#schemas)
+- [Examples](#examples)
+- [License](#license)
+
+---
+
+## Overview
+
+The HHB Mock API defines a simple set of endpoints to:
+
+- Authenticate clients
+- Retrieve live overview and hydrogen metrics
+- Query historical data
+- Fetch system messages and operational modes
+- Manage user details
+
+It is intended for frontend development or testing tooling without a real backend.

@@ -177,100 +177,103 @@ components:
     OverviewDto:
       type: object
       properties:
-        solarProduction:
+        solarPowerProduction:
           type: number
           example: 300.5
-        solarProductionMax:
+        powerConsumption:
           type: number
-          example: 1000
-        consumption:
-          type: number
-          example: 1000.3
-        consumptionMax:
-          type: number
-          example: 1200
-        battery:
+          example: 900
+        batteryPower:
           type: number
           example: -75.0
-        batteryMax:
+        maxBatteryChargingPower:
           type: number
           example: 100.0
-        grid:
+        maxBatteryDischargingPower:
+          type: number
+          example: 100.0
+        gridPower:
           type: number
           example: 130.2
-        gridMax:
+        maxGridPower:
           type: number
           example: 150
-        hydrogen:
+        h2Power:
           type: number
           example: 28.7
-        hydrogenMax:
+        maxFuelCellPower:
           type: number
           example: 50
-        batterySoc:
+        maxElectrolyserPower:
+          type: number
+          example: 50
+        actualBatteryCapacity:
+          type: number
+          example: 50
+        soc:
           type: number
           example: 78.5
-        batteryCharing:
+        batteryCharging:
           type: number
           example: 25.0
-        batteryDischarge:
+        batteryDischarging:
           type: number
           example: 12.0
-        hydrogenSoc:
+        h2Soc:
           type: number
           example: 50
-        hydrogenProduction:
+        h2Generation:
           type: number
           example: 10.5
-        hydrogenConsumption:
+        h2Consumption:
           type: number
           example: 8.2
-        gridSales:
+        gridExport:
           type: number
           example: 45.0
-        gridPurchase:
+        gridImport:
           type: number
           example: 70.0
-        theHighTariffEndsIn:
-          type: string
-          example: "3h 20m 50s"
-        outdoorTemperature:
+        temperature:
           type: number
           example: 23
 
     HydrogenDto:
       type: object
       properties:
-        electrolyzerPower:
+        electrolyserPower:
           type: number
           example: 350.0
-        electrolyzerPressure:
+        electrolyserPressure:
           type: number
           example: 25.5
-        electrolyzerTemperature:
+        electrolyserTemperature:
           type: number
           example: 45.0
-        expansionVesselPressurePercent:
+        bufferTankState:
           type: number
           example: 65.0
-        expansionVesselPressure:
+        bufferTankPressure:
           type: number
           example: 1.8
-        compressorRunning:
-          type: boolean
-          example: true
-        electrolyzerPerformance:
+        compressorStatus:
           type: number
-          example: 92.3
-        fuelCellsTemperature:
-          type: number
-          example: 55.5
-        pressureInBottles:
-          type: number
-          example: 300.0
-        pressureInBottlesPercent:
+          example: 1
+        h2StorageTankPressure:
           type: number
           example: 85.0
+        h2StorageTankState:
+          type: number
+          example: 300.0
+
+
+        fuelCellPower:
+          type: number
+          example: 92.3
+        fuelCellTemperature:
+          type: number
+          example: 55.5
+
 
     HistoryFilter:
       type: object
