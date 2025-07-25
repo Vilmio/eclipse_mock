@@ -55,13 +55,14 @@ paths:
 
   /history-data/:
     get:
-      tags: [HHB]
+      tags: [ HHB ]
       parameters:
         - in: header
           name: Authorization
-          required: true
+          required: false
           schema:
-            type: string
+          type: string
+          description: Optional auth header for mock
         - in: query
           name: date
           required: false
@@ -83,7 +84,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HistoryDto'
-
   /messages:
     get:
       tags: [HHB]
