@@ -179,6 +179,28 @@ paths:
         '400':
           description: Chybný požadavek
 
+  /info-data:
+    get:
+      tags: [ HHB ]
+      responses:
+        '200':
+          description: Info data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InfoDataDto'
+
+  /contact-data:
+    get:
+      tags: [ HHB ]
+      responses:
+        '200':
+          description: Contact data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ContactDataDto'
+
 components:
   schemas:
     OverviewDto:
@@ -325,13 +347,13 @@ components:
           example: true
         battery:
           type: boolean
-          example: true
+          example: false
         holidays:
           type: boolean
           example: false
         pro:
           type: boolean
-          example: true
+          example: false
 
     UserDto:
       type: object
@@ -388,6 +410,54 @@ components:
           type: boolean
           example: false
 
+    InfoDataDto:
+      type: object
+      properties:
+        ipAddress:
+          type: string
+          example: "192.168.11.34"
+        registrationNumber:
+          type: string
+          example: "REG-2023-005"
+        deviceNumber:
+          type: string
+          example: "DEV-456789"
+        hardwareVersion:
+          type: string
+          example: "0.1.0"
+        softwareVersion:
+          type: string
+          example: "0.1.2"
+        engagementDate:
+          type: string
+          example: "10.12.1999"
+
+    ContactDataDto:
+      type: object
+      properties:
+        firstName:
+          type: string
+          example: "Jan"
+        lastName:
+          type: string
+          example: "Novak"
+        address:
+          type: string
+          example: "Praha 5"
+        password:
+          type: string
+          example: "admin"
+        email:
+          type: string
+          format: email
+          example: "jan.novak@seznam.cz"
+        phoneNumber:
+          type: string
+          example: "777888999"
+        language:
+          type: string
+          example: "cz"
+          
     HistoryDto:
       type: object
       properties:
